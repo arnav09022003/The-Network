@@ -1,23 +1,38 @@
-/*                                               General Styles                                         */
+/*---------------------------------------------Temp Styles--------------------------------------------------*/
+
+/*----------------------------------------------General Styles-----------------------------------------------*/
 body{
+    /* #191825 #131219*/
     background-color: black;
     color: #F4EEE0;
     font-family: 'Poppins', sans-serif;
 }
 
-/*                                                Navbar Styles                                         */
-.navbar{
-    padding: 0;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+.blur{
+    filter: blur(5px);
+    /* background-color: #eee; */
 }
 
-.navbar .navbar-inner{
-    background-color: transparent;
+/*-----------------------------------------------Navbar Styles------------------------------------------------*/
+.navbar{
+    padding: 0;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
 }
 
 .navbar .container-fluid{
     padding: 0 4rem;
+}
+
+.navbar .brand-hide{
+    display: none;
+}
+
+.navbar .brand-name{
+    background: linear-gradient(90deg,#0E8388,#eee);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 1.9rem;
 }
 
 .navbar .brand-logo{
@@ -28,23 +43,45 @@ body{
 .navbar .link{
     padding: 1rem;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
     font-family: 'Comme', sans-serif;
     text-decoration: none;
 }
 
-.hide{
-    visibility: hidden;
+.navbar .link:hover{
+    background: linear-gradient(90deg,#0E8388,#eee);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
+.black-navbar{
+    background-color: black;
+}
 
-/*                                       Main Site General Styles                                           */
+@media screen and (max-width:576px){
+    .navbar .container-fluid{
+        padding-left: 1rem;
+    }
+}
+
+/*----------------------------------------Main Site General Styles--------------------------------------------*/
 
 .main-site{
-    padding: 3rem 4rem;
+    padding-top: 3rem;
+    padding-left: 4rem;
+    padding-bottom: 2rem;
+    margin: 0 1.5rem;
+}   
+
+@media screen and (max-width:576px){
+    .main-site{
+        margin: 0;
+        padding-left: 3rem;
+    }
 }
 
-/*                                       First Half Styles                                                  */
+/*----------------------------------------First Half Styles--------------------------------------------------*/
 
 .first-half{
     margin-top: 2rem;
@@ -52,4 +89,79 @@ body{
 
 .first-half h1{
     font-size: 4rem;
+    background-image:linear-gradient(90deg,#0E8388,#eee);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.first-half .about-us{
+    color: #F4EEE0;
+}
+.first-half .right-img{
+    text-align: center;
+    margin:auto;
+}
+
+/*---------------------------------------Contact Section Styles-----------------------------------------------*/
+
+/*-----------------------------------Normal contact section-------------------------------------------------- */
+.contact-section{
+    height: 10rem;
+    text-align: center;
+    background-color: #157b7d;
+    padding-top: 4rem;
+}
+
+.contact-section .logos{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: -1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.contact-section .copyright{
+    font-family: 'Comme', sans-serif;
+    margin-top: 3rem;
+}
+
+.hide{
+    display: none;
+}
+/*-----------------------------------Contact Larger section-------------------------------------------------- */
+.contact-section-larger{
+    height: 43rem;
+    background-color: #0E8388;
+}
+
+.contact-section-larger .left-half{
+    padding-top: 3.5rem;
+}
+
+.contact-section-larger .right-half{ 
+    padding-top: 7.5rem;
+    padding-left: 3rem;
+}
+
+.contact-section-larger .logos{
+    margin-left: 3rem;
+    padding: 3rem;
+    color: white;
+    text-decoration: none;
+    font-size: 2.3rem;
+}
+
+.contact-section-larger .copyright{
+    text-align: center;
+    margin-top: 3rem;
+    font-family: 'Comme', sans-serif;
+}
+
+.contact-section-larger .form-control{
+    width: 100%;
+}
+
+.contact-section-larger #message-box{
+    overflow: hidden;
+    resize: none;
 }
